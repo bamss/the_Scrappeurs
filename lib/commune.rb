@@ -13,7 +13,7 @@ def get_town_hall_email(town_hall_urls)
  end
  
 
-
+#recuper
 def get_townhall_urls
     doc = Nokogiri::HTML(open('http://annuaire-des-mairies.com/val-d-oise.html'))
     @url_communes = []
@@ -25,11 +25,14 @@ def get_townhall_urls
   
 end
 
+#récupère les mails des mairies
 
 def url_email_methode #urls_des_mairies
   email=[]
   n = get_townhall_urls.count
   i = 0
+  #on n'a fait une Boucle qui parcours chaque url avec le get_towhall_urls
+  # et qui récupère un a un chaque mail qu'on envoie dans le array email avec la variable x
   while i < n
     doc = Nokogiri::HTML(open("#{get_townhall_urls[i]}"))
     doc.xpath('//section[2]/div/table/tbody/tr[4]/td[2]').map do |x|
