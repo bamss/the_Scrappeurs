@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 
 
-
+# Récupère l'adresse email, qui prend en parametre le liens de la page de la mairie 
 def get_town_hall_email(town_hall_urls)
     doc = Nokogiri::HTML(open(town_hall_urls))
     doc.xpath('//tbody/tr[4]/td[2]').each do |v|
