@@ -11,7 +11,6 @@ def get_town_hall_email(town_hall_urls)
  end
  
  end
- #p get_town_hall_email("http://annuaire-des-mairies.com/95/argenteuil.html")
  
 
 
